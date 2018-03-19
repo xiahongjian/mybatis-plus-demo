@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/test?useSSL=false
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: root
+mybatis-plus:
+  mapper-location: classpath:/mapper/*Mapper.xml
+  typeAliasesPackage: com.example.mybatis_plus_demo.entity
+  typeEnumsPackage: com.example.mybatis_plus_demo.entity.enums
+  
