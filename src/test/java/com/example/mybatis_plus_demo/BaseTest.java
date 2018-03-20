@@ -41,4 +41,10 @@ public class BaseTest {
 		userService.insert(u);
 		assertNotNull(u.getId());
 	}
+	
+	@Test
+	public void testSelect() {
+		User u = userService.selectByUsername("test");
+		assertNotNull(u);
+	}
 }

@@ -5,7 +5,8 @@ spring:
     username: root
     password: root
 mybatis-plus:
-  mapper-location: classpath:/mapper/*Mapper.xml
+  mapperLocations: classpath:/mapper/*.xml
   typeAliasesPackage: com.example.mybatis_plus_demo.entity
   typeEnumsPackage: com.example.mybatis_plus_demo.entity.enums
-  
+logging:
+  level: debug
