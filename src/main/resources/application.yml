@@ -4,6 +4,20 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     username: root
     password: root
+    druid:
+      web-stat-filter: 
+        enabled: true
+        url-pattern: /*
+        exclusions: '*.js, *.gif, *.jpg, *.png, *.css, *.ico, /druid/*'
+      stat-view-servlet:
+        enabled: true
+        url-pattern: /druid/*
+        reset-enable: false
+        login-username: druid
+        login-password: druid
+#        allow:
+#        deny:
+        
 mybatis-plus:
   mapperLocations: classpath:/mapper/*.xml
   typeAliasesPackage: com.example.mybatis_plus_demo.entity
